@@ -6,5 +6,5 @@
 
 - [마크다운 문법](./src/md/markdown.md)
 - [회고](./src/md/retrospect.md)
-- [avatars](./src/avatars/avatars.html)
+- [avatars](https://apppiel.github.io/home-work/src/avatars/avatars.html)
 - [회고](./src/avatars/avatars.md)
