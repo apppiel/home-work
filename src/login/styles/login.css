@@ -1,0 +1,11 @@
+@import "/src/login/styles/common/best-reset.css";
+@import "/src/login/styles/common/a11y.css";
+
+.naverLogo {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.loginForm {
+  margin-top: 3.125rem;
+}
