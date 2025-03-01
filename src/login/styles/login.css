@@ -21,11 +21,11 @@ body {
 
 /* 모바일 */
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .loginForm {
     margin-top: 3.125rem;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 1.25rem;
 
     fieldset {
       border: 0;
@@ -56,18 +56,26 @@ body {
   }
   .activeIp {
     display: flex;
+    margin-block-start: 0.625rem;
+    width: 100%;
     justify-content: flex-end;
+    padding: 0 1.25rem;
 
     .ipSecurity {
       display: none;
     }
   }
+  .loginActive {
+    display: flex;
+    line-height: 1.5;
+  }
 }
 
 /* 데스크탑 */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .loginForm {
     margin-top: 3.125rem;
+    width: 31.25rem;
 
     fieldset {
       border: 0;
@@ -76,6 +84,7 @@ body {
     .loginInput {
       display: flex;
       flex-flow: column;
+      padding: 0 1.25rem;
 
       input {
         inline-size: 28.75rem;
@@ -97,31 +106,57 @@ body {
       }
     }
   }
+  .activeIp {
+    display: flex;
+    margin-top: 0.8125rem;
+    width: 28.75rem;
+    justify-content: space-between;
+
+    .loginActive {
+      display: flex;
+      line-height: 1.5;
+    }
+  }
+  .ipSecuritydiv {
+    label {
+      color: var(--color);
+    }
+    input {
+      border: 0;
+      background: #fff;
+      color: #dadada;
+    }
+  }
 }
 
 .loginButton {
-  margin-top: 1.25rem;
-  inline-size: 100%;
-  block-size: 2.8125rem;
-  color: #fff;
-  background: #03cf5d;
-  border: 0;
+  @media (max-width: 48rem) {
+    margin-top: 1.25rem;
+    inline-size: 100%;
+    block-size: 2.8125rem;
+    color: #fff;
+    background: #03cf5d;
+    border: 0;
+  }
+
+  @media (min-width: 48rem) {
+    margin-top: 1.25rem;
+    inline-size: 28.75rem;
+    block-size: 2.8125rem;
+    color: #fff;
+    background: #03cf5d;
+    border: 0;
+  }
 }
 
-.activeIp {
-  display: flex;
-  margin-block-start: 0.625rem;
-  width: 28.75rem;
+input[type="checkbox"] {
+  appearance: none;
+  background: url("/src/login/styles/svg/unchecked.svg") no-repeat;
+  margin-right: 0.3125rem;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+}
 
-  input[type="checkbox"] {
-    appearance: none;
-    background: url("/src/login/styles/svg/unchecked.svg") no-repeat;
-    margin-right: 0.3125rem;
-    inline-size: 1.5rem;
-    block-size: 1.5rem;
-  }
-
-  input[type="checkbox"]:checked {
-    background: url("/src/login/styles/svg/checked.svg") no-repeat;
-  }
+input[type="checkbox"]:checked {
+  background: url("/src/login/styles/svg/checked.svg") no-repeat;
 }
