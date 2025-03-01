@@ -1,11 +1,107 @@
 @import "/src/login/styles/common/best-reset.css";
 @import "/src/login/styles/common/a11y.css";
 
-.naverLogo {
-  text-align: center;
-  padding-top: 100px;
+:root {
+  --color: #121212;
+  --input-size: 0.875rem;
+  --font-size: 1rem;
 }
 
-.loginForm {
-  margin-top: 3.125rem;
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  color: var(--color);
+  font-size: var(--font-size);
+}
+
+.naverLogo {
+  padding-top: 6.25rem;
+}
+
+/* 모바일 */
+
+@media (max-width: 768px) {
+  .loginForm {
+    margin-top: 3.125rem;
+    width: 100%;
+    padding: 0 20px;
+
+    fieldset {
+      border: 0;
+    }
+
+    .loginInput {
+      display: flex;
+      flex-flow: column;
+
+      input {
+        block-size: 2.8125rem;
+        margin-top: 0.625rem;
+        padding-inline-start: 0.875rem;
+        font-size: var(--input-size);
+        border: 1px solid #dadada;
+      }
+    }
+  }
+  .activeIp {
+    input {
+      justify-content: flex-end;
+    }
+    .ip-security {
+      display: none;
+    }
+  }
+}
+
+/* 데스크탑 */
+@media (min-width: 768px) {
+  .loginForm {
+    margin-top: 3.125rem;
+    background: pink;
+
+    fieldset {
+      border: 0;
+    }
+
+    .loginInput {
+      display: flex;
+      flex-flow: column;
+
+      input {
+        inline-size: 28.75rem;
+        block-size: 2.8125rem;
+        margin-top: 0.625rem;
+        padding-inline-start: 0.875rem;
+        font-size: var(--input-size);
+        border: 1px solid #dadada;
+      }
+    }
+  }
+}
+
+.loginButton {
+  margin-top: 1.25rem;
+  inline-size: 100%;
+  block-size: 2.8125rem;
+  color: #fff;
+  background: #03cf5d;
+  border: 0;
+}
+
+.activeIp {
+  display: flex;
+  margin-block-start: 0.625rem;
+
+  input[type="checkbox"] {
+    appearance: none;
+    background: url("/src/login/styles/svg/unchecked.svg") no-repeat;
+    margin-right: 0.3125rem;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+  }
+
+  input[type="checkbox"]:checked {
+    background: url("/src/login/styles/svg/checked.svg") no-repeat;
+  }
 }

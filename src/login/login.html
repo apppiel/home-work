@@ -75,9 +75,13 @@
         <button type="submit" class="loginButton">로그인</button>
       </fieldset>
     </form>
-    <input type="checkbox" id="login-active" />
-    <label for="login-active">로그인 상태유지</label>
-    <label for="ip-security">IP 보안</label>
-    <a href="/"><input type="button" id="ip-security" value="OFF" /></a>
+    <div class="activeIp">
+      <input type="checkbox" id="login-active" />
+      <label for="login-active">로그인 상태유지</label>
+      <label for="ip-security">IP 보안</label>
+      <a href="/" class="ip-security"
+        ><input type="button" id="ip-security" value="OFF"
+      /></a>
+    </div>
   </body>
 </html>
