@@ -41,14 +41,24 @@ body {
         padding-inline-start: 0.875rem;
         font-size: var(--input-size);
         border: 1px solid #dadada;
+
+        &:hover {
+          background-color: #e9f0fd;
+          outline: 1px solid #03cf5d;
+        }
+
+        &:focus {
+          outline: 1px solid #03cf5d;
+          background-color: #e9f0fd;
+        }
       }
     }
   }
   .activeIp {
-    input {
-      justify-content: flex-end;
-    }
-    .ip-security {
+    display: flex;
+    justify-content: flex-end;
+
+    .ipSecurity {
       display: none;
     }
   }
@@ -58,7 +68,6 @@ body {
 @media (min-width: 768px) {
   .loginForm {
     margin-top: 3.125rem;
-    background: pink;
 
     fieldset {
       border: 0;
@@ -75,6 +84,16 @@ body {
         padding-inline-start: 0.875rem;
         font-size: var(--input-size);
         border: 1px solid #dadada;
+
+        &:hover {
+          background-color: #e9f0fd;
+          outline: 1px solid #03cf5d;
+        }
+
+        &:focus {
+          outline: 1px solid #03cf5d;
+          background-color: #e9f0fd;
+        }
       }
     }
   }
@@ -92,6 +111,7 @@ body {
 .activeIp {
   display: flex;
   margin-block-start: 0.625rem;
+  width: 28.75rem;
 
   input[type="checkbox"] {
     appearance: none;
