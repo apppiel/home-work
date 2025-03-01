@@ -1,5 +1,5 @@
-@import "/src/login/styles/common/best-reset.css";
-@import "/src/login/styles/common/a11y.css";
+@import "../styles/common/best-reset.css";
+@import "../styles/common/a11y.css";
 
 :root {
   --color: #121212;
@@ -16,15 +16,15 @@ body {
 }
 
 .naverLogo {
-  padding-top: 6.25rem;
+  padding-block-start: 6.25rem;
 }
 
 /* 모바일 */
 
 @media (max-width: 48rem) {
   .loginForm {
-    margin-top: 3.125rem;
-    width: 100%;
+    margin-block-start: 3.125rem;
+    inline-size: 100%;
     padding: 0 1.25rem;
 
     fieldset {
@@ -37,7 +37,7 @@ body {
 
       input {
         block-size: 2.8125rem;
-        margin-top: 0.625rem;
+        margin-block-start: 0.625rem;
         padding-inline-start: 0.875rem;
         font-size: var(--input-size);
         border: 1px solid #dadada;
@@ -57,7 +57,7 @@ body {
   .activeIp {
     display: flex;
     margin-block-start: 0.625rem;
-    width: 100%;
+    inline-size: 100%;
     justify-content: flex-end;
     padding: 0 1.25rem;
 
@@ -109,7 +109,7 @@ body {
   .activeIp {
     display: flex;
     margin-top: 0.8125rem;
-    width: 28.75rem;
+    inline-size: 28.75rem;
     justify-content: space-between;
 
     .loginActive {
@@ -151,12 +151,12 @@ body {
 
 input[type="checkbox"] {
   appearance: none;
-  background: url("/src/login/styles/svg/unchecked.svg") no-repeat;
-  margin-right: 0.3125rem;
+  background: url("../styles/svg/unchecked.svg") no-repeat;
+  margin-inline-end: 0.3125rem;
   inline-size: 1.5rem;
   block-size: 1.5rem;
 }
 
 input[type="checkbox"]:checked {
-  background: url("/src/login/styles/svg/checked.svg") no-repeat;
+  background: url("../styles/svg/checked.svg") no-repeat;
 }
