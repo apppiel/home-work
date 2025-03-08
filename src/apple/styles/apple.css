@@ -1,3 +1,43 @@
 @import "./card-component.css";
 
-/* 카드 레이아웃 */
+.container {
+  display: grid;
+
+  .background-test {
+    background: url(../products/ipad_pro.jpeg) no-repeat center / cover;
+  }
+  .product.ipad-pro {
+    margin-top: 40px;
+    @media (max-width: 1024px) {
+      .title {
+        font-size: var(--large-text);
+        color: var(--white);
+      }
+
+      .subtitle {
+        font-size: var(--medium-text);
+        line-height: var(--line-normal);
+        color: var(--white);
+      }
+    }
+  }
+
+  .background-test1 {
+    background: url("../products/ipad_air.jpeg") no-repeat center / cover;
+  }
+  .product.ipad-air {
+    margin-top: 40px;
+    @media (max-width: 1024px) {
+      .title {
+        font-size: var(--large-text);
+        color: var(--black);
+      }
+
+      .subtitle {
+        font-size: var(--medium-text);
+        line-height: var(--line-normal);
+        color: var(--black);
+      }
+    }
+  }
+}

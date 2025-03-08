@@ -13,14 +13,30 @@
     <link rel="stylesheet" href="./styles/card-component.css" />
   </head>
   <body>
-    <section class="product">
-      <h2>iPad Pro</h2>
-      <p>놀라우리만치 얇다.<br />엄청나게 강력하다.</p>
+    <div class="component">
+      <h2 class="title sm">small screen 제목</h2>
+      <h2 class="title lg">large screen 제목</h2>
+      <p class="subtitle sm">small screen 부제목</p>
+      <p class="subtitle lg">large screen 부제목</p>
       <p class="release">출시일 추후 공개</p>
       <div class="buttons">
-        <a href="#">더 알아보기</a>
-        <a href="#">가격 보기</a>
+        <a class="blue-button more" href="#">더 알아보기</a>
+        <a class="black-button more" href="#">더 알아보기</a>
+        <a class="blue-button price" href="#">가격 보기</a>
+        <a class="black-button price" href="#">가격 보기</a>
       </div>
-    </section>
+    </div>
+
+    <div class="product">
+      <section class="product ipad-pro">
+        <h2 class="title">iPad Pro</h2>
+        <p class="subtitle">놀라우리만치 않다.<br />엄청나게 강력하다.</p>
+        <p class="release">출시일 추후 공개</p>
+        <div class="buttons">
+          <a href="/" class="black-button more">더 알아보기</a>
+          <a href="/" class="black-button">가격보기</a>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

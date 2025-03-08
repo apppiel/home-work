@@ -2,99 +2,62 @@
 @import "./theme.css";
 @import "./base.css";
 
+.component {
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+  padding: 1.25rem;
+}
+.release {
+  font-size: var(--small-text);
+  color: var(--gray);
+}
+
+.blue-button {
+  border: 1px solid var(--blue-100);
+  padding-block: var(--x-small-spacing);
+  padding-inline: var(--small-spacing);
+  border-radius: 1.5rem;
+  color: var(--blue-100);
+}
+
+.blue-button.more {
+  background: var(--blue-100);
+  color: var(--white);
+}
+
+.black-button {
+  border: 1px solid var(--black);
+  padding-block: var(--x-small-spacing);
+  padding-inline: var(--small-spacing);
+  border-radius: 1.5rem;
+}
+
+.black-button.more {
+  background: var(--black);
+  color: var(--white);
+  padding-block: var(--x-small-spacing);
+  padding-inline: var(--small-spacing);
+  border-radius: 1.5rem;
+}
+
 .product {
-  @media (max-width: 1024px) {
-    height: var(--size);
-    background: url("../products/ipad_pro.jpeg") no-repeat center/cover;
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-    color: var(--white);
-    gap: var(--small-spacing);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: var(--small-spacing);
+  block-size: var(--size);
 
-    h2 {
-      margin-block-start: var(--large-spacing);
-      color: var(--white);
-      font-size: var(--large-text);
-    }
-
-    p {
-      font-size: var(--base-text);
-      line-height: 1.5;
-    }
-
-    .release {
-      font-size: var(--small-text);
-      color: var(--gray);
-    }
-
-    .buttons {
-      margin-block-start: var(--small-spacing);
-      a {
-        border: 1px solid var(--blue-100);
-        padding: var(--x-small-spacing);
-        border-radius: 1.25rem;
-        color: var(--blue-100);
-        font-size: var(--xx-small-text);
-        margin-inline: 8px;
-
-        &:hover {
-          background: var(--blue-100);
-          color: var(--white);
-        }
-        &:focus {
-          background: var(--blue-100);
-          color: var(--white);
-          outline: none;
-        }
-      }
-    }
+  .sm-title {
+    margin-block-start: var(--large-spacing);
   }
-  @media (min-width: 1024px) {
-    height: var(--size);
-    background: url("../products/ipad_pro_wide_2x.jpeg") no-repeat center/cover;
+
+  .buttons {
     display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-    color: var(--white);
-    gap: var(--small-spacing);
+    flex-flow: row nowrap;
 
-    h2 {
-      margin-block-start: var(--extra-large-spacing);
-      color: var(--white);
-      font-size: var(--extra-large-text);
-    }
-
-    p {
-      font-size: var(--medium-text);
-      line-height: 1.5;
-    }
-
-    .release {
-      font-size: var(--small-text);
-      color: var(--gray);
-    }
-
-    .buttons {
-      margin-block-start: var(--small-spacing);
-      a {
-        border: 1px solid var(--blue-100);
-        padding: var(--x-small-spacing);
-        border-radius: 1.25rem;
-        color: var(--blue-100);
-        margin-inline: 8px;
-        font-size: var(--x-small-text);
-
-        &:hover {
-          background: var(--blue-100);
-          color: var(--white);
-        }
-        &:focus {
-          background: var(--blue-100);
-          color: var(--white);
-          outline: none;
-        }
-      }
+    a {
+      margin-inline: var(--base-spacing);
     }
   }
 }
